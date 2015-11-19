@@ -4,7 +4,8 @@
 
 路由器配置方案：ShadowSocks-libev + ChinaDNS
 
-首先路由器型号需要在openwrt列表中：http://wiki.openwrt.org/toh/start。(可以ctrl+F搜索匹配型号)，并记录所用路由器cpu的型号。
+首先路由器型号需要在openwrt列表中：http://wiki.openwrt.org/toh/start/
+(可以ctrl+F搜索匹配型号)，并记录所用路由器cpu的型号。
 
 ### 一.下载路由器CPU型号对应的的固件：https://downloads.openwrt.org/
 
@@ -25,6 +26,7 @@
   * chinaDNS - [http://sourceforge.net/projects/openwrt-dist/files/chinadns/](http://sourceforge.net/projects/openwrt-dist/files/chinadns/)
   * Shadowsocks-spec-LuCI - [http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/](http://sourceforge.net/projects/openwrt-dist/files/luci-app/shadowsocks-spec/)
   * chinaDNS-LuCI - [http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/](http://sourceforge.net/projects/openwrt-dist/files/luci-app/chinadns/)
+ 
   **注意**: 一定要下载路由器cpu型号对应的文件！dir-505选择ar71xx
 * 安装到路由器
   * 保证路由器可以上外网
