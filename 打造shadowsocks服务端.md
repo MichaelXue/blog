@@ -28,9 +28,9 @@ vi /etc/shadowsocks.json
 **注意**: 端口和密码需要更改为你自己的。
     
 * 安装Supervisor进程管理工具,保证shadowsocks不会因为各种原因死掉
-```
-easy_install supervisor
-```
+  ```
+  easy_install supervisor
+  ```
   * 创建配置文件
   ```
   echo_supervisord_conf > /etc/supervisord.conf
@@ -43,25 +43,31 @@ easy_install supervisor
     autorestart=true
     user=nobody
   ```
-  * 默认路径配置启动：supervisord
-
+  * 默认路径配置启动：
+  ```
+    supervisord
+  ```
   * 开机启动Supervisor
   ```
-  vi /etc/rc.local
+    vi /etc/rc.local
   ```
   * 添加以下内容
   ```
-  supervisord -c /etc/supervisord.conf
+    supervisord -c /etc/supervisord.conf
   ```
   * 常用命令
+  * 
     获得所有程序状态 supervisorctl status
+
     关闭目标程序 supervisorctl stop ssserver
+    
     启动目标程序 supervisorctl start ssserver
+    
     关闭所有程序 supervisorctl shutdown
 
   * 启动关闭（使用Supervisor后，启动关闭交给Supervisor）：
   ```
-  ssserver -c /etc/shadowsocks.json -d start
+    ssserver -c /etc/shadowsocks.json -d start
   ```
   ```
     ssserver -c /etc/shadowsocks.json -d stop
