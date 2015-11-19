@@ -9,7 +9,7 @@ yum install m2crypto python-setuptools && easy_install pip
 ```
 pip install shadowsocks
 ```
-* 修改配置文件
+* 修改配置文件，端口和密码需要更改为你自己的
 ```
 vi /etc/shadowsocks.json
 ```
@@ -25,7 +25,6 @@ vi /etc/shadowsocks.json
     "fast_open": false
 }
 ```
-**注意**: 端口和密码需要更改为你自己的。
     
 * 安装Supervisor进程管理工具,保证shadowsocks不会因为各种原因死掉
   ```
@@ -37,23 +36,23 @@ vi /etc/shadowsocks.json
   ```
   * 配置shadowsocks，编辑/etc/supervisord.conf，在最后加入
   ```
-    [program:shadowsocks]
-    command=ssserver -c /etc/shadowsocks.json
-    autostart=true
-    autorestart=true
-    user=nobody
+  [program:shadowsocks]
+  command=ssserver -c /etc/shadowsocks.json
+  autostart=true
+  autorestart=true
+  user=nobody
   ```
   * 默认路径配置启动：
   ```
-    supervisord
+  supervisord
   ```
   * 开机启动Supervisor
   ```
-    vi /etc/rc.local
+  vi /etc/rc.local
   ```
   * 添加以下内容
   ```
-    supervisord -c /etc/supervisord.conf
+  supervisord -c /etc/supervisord.conf
   ```
   * 常用命令
   * 
@@ -67,10 +66,10 @@ vi /etc/shadowsocks.json
 
   * 启动关闭（使用Supervisor后，启动关闭交给Supervisor）：
   ```
-    ssserver -c /etc/shadowsocks.json -d start
+  ssserver -c /etc/shadowsocks.json -d start
   ```
   ```
-    ssserver -c /etc/shadowsocks.json -d stop
+  ssserver -c /etc/shadowsocks.json -d stop
   ```
 
 * 更新shadowsocks：
