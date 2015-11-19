@@ -32,10 +32,10 @@
   * 保证路由器可以上外网
   * 用ssh工具上传shadowsocks-libev-spec、ChinaDNS、及2个luci文件 4个ipk包到路由器/tmp目录
   ```
-  $ ssh root@192.168.5.1
+  ssh root@192.168.5.1
   ```
   ```
-  $ opkg update
+  opkg update
   ```
 * 安装shadowsocks相关包及语言包（网页界面系统设置中切换中文）
     ```
